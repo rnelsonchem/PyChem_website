@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Computer Modern";
+    src: url:('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+}
+
+body {
+    min-width: 40em;
+    max-width: 45em;
+    font-family: Computer Modern, "Verdana", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 1.2em;
+}
+
+div.figure {
+    text-align: center;
+}
