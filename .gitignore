@@ -168,3 +168,7 @@ pip-log.txt
 
 # Build directory
 _build
+
+# These are for syncing with GoDaddy account
+_remote
+remote_sync
