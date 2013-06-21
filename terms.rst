@@ -7,6 +7,11 @@ to getting assistance. This section will also define some of the more
 widely-used, but specialized, terminology, which will help you decode some of
 the information on the web.
 
+.. _mutable:
+
+Mutability
+----------
+
 Namespaces
 ----------
 

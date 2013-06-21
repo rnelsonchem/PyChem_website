@@ -15,7 +15,8 @@ Contents
     install
     writing
     ipython/ipython
-    basics
+    basics1
+    basics2
     terms
     examples
     ftir/ftir
