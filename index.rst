@@ -14,7 +14,7 @@ Contents
     quick/quick
     install
     writing
-    ipython
+    ipython/ipython
     basics
     terms
     examples
