@@ -25,6 +25,7 @@ Contents
     multid/multid
     multid2/distrib
     appendix_a/appendix_a
+    appendix_b/appendix_b
 
 
 Indices and tables
