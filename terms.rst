@@ -140,21 +140,20 @@ Python is an object-oriented programming language. Objects, also called
 abstractions can have associated variables and functions (also called
 *methods*) that operate on that data. 
 
-This concept can be very confusing at first, so let's look at a simple example
-to help us get started. Let's conceptually define a new object called
-``Rectangle``. In general, what kind of data would a Rectangle require? You
-might expect that it would at least be necessary to define two pieces of data:
-*length* and *width*. What kind of functions, or manipulations, could we do
-with this data? For starters, we may want to know the area and circumference
-of our rectangle, so we could define functions to calculate those values.
-These attributes -- length, width, area, circumference -- will form our base
-description a rectangle *class*.  We can make many different *instances* of
-our class by assigning values to *length* and *width*. The
-:download:`following file<rectangle.py>` is an implementation of this
-rectangle class. You don't need to understand the way it is written, but let's
-import it and see how this works. Put this file in any folder, and move you
-IPython session to that location (either using the ``%cd`` magic function or
-with you Python IDE).
+This can be very confusing at first, so let's look at a simple example to help
+us get started. Let's conceptually define a new object called ``Rectangle``.
+In general, what kind of data would a Rectangle require? You might expect that
+it would at least be necessary to define two pieces of data: *length* and
+*width*. What kind of functions, or manipulations, could we do with this data?
+For starters, we may want to know the area and circumference of our rectangle,
+so we could define functions to calculate those values.  These attributes --
+length, width, area, circumference -- will form our base description a
+rectangle *class*.  We can make many different *instances* of our class by
+assigning values to *length* and *width*. The :download:`following
+file<rectangle.py>` is an implementation of this rectangle class. You don't
+need to understand the way it is written, but let's import it and see how this
+works. Put this file in any folder, and move you IPython session to that
+location (either using the ``%cd`` magic function or with you Python IDE).
 
 First, import the ``Rectangle`` object from our ``rectangle`` module (in this
 case our 'rectangle.py' file is the module). Because ``Rectangle`` is the only
