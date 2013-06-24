@@ -80,7 +80,7 @@ Integers are any number that does not have a decimal point. These values can
 be represented exactly by a computer, and in Python, they can be any size
 (although very long numbers will end in 'L', which you can ignore).
 :ref:`Strings<strings>` and floating point numbers can be forced to integers
-with the ``int`` function. For example:
+with the ``int`` :ref:`function<functions>`. For example:
 
 .. code-block:: ipython
 
@@ -219,7 +219,7 @@ Strings are the fancy name for text in Python (and many other computer
 languages). Strings can be wrapped in single or double quotes, it usually
 doesn't matter what you choose. However, if you want to use either a single or
 double quote in your text then, you can't use that type of quote to wrap your
-string.
+string. String also work with the ``*`` and ``+`` operators.
 
 .. code-block:: ipython
 
@@ -228,6 +228,12 @@ string.
     
     In [2]: "So is this."
     Out[2]: 'So is this.'
+
+    In [47]: 'Hello' + 'World'
+    Out[47]: 'HelloWorld'
+    
+    In [48]: 'Hello'*7
+    Out[48]: 'HelloHelloHelloHelloHelloHelloHello'
 
 Sometimes you may want your text to span multiple lines. You can do that by
 using a triple single/double quote notation. This is heavily used in
