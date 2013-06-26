@@ -4,6 +4,12 @@ Welcome to PyChem
 An introductory guide to learning Python for scientific (specifically
 chemical) applications. 
 
+.. |date| date::
+
+.. |time| date:: %H:%M
+
+This document was last updated at |date| at |time|.
+
 Contents
 --------
 
