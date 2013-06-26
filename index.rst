@@ -26,6 +26,7 @@ Contents
     terms
     examples
     ftir/ftir
+    UV/uv
     nmr/nmr
     batch/batch
     sim/sim
