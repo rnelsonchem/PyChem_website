@@ -10,19 +10,19 @@ Excel, are capable tools that serve a useful role for many scientists;
 however, there are a number of reasons that it can be advantageous to learn a
 programming language as a compliment to a spreadsheet-based software. First of
 all, simple programs can automate many of your repetitive data analysis tasks.
-In addition, knowing a programming language can be helpful for specialized
-data analyses, and with your programming skills, you have the ability to
-create your own custom tools for the job. As a bonus, learning to program can
-be an enjoyable pastime that also provides you with a clearer understanding of
+In addition, a programming language can be helpful for specialized data
+analyses, and with your programming skills, you have the ability to create
+your own custom tools for the job. As a bonus, learning to program can be an
+enjoyable pastime that also provides you with a clearer understanding of
 computer terminology and processes.
 
 I started teaching myself Python in 2007, and at the time, I found a near
-infinite number of introductory tutorials on the web and books made of paper.
-Unfortunately, most of these reference materials are geared towards computer
-scientists and professional programmers, so I spent a substantial amount of
-time determining how to apply these concepts to my data analysis problems.
-This meant that, compared with a program like Excel, I was not able to
-productively apply this knowledge for quite some time. Below is a graphical
+infinite number of introductory tutorials, both on the web and as books made
+of paper.  Unfortunately, most of these reference materials are geared towards
+computer scientists and professional programmers, so I spent a substantial
+amount of time determining how to apply these concepts to my data analysis
+problems. This meant that, compared with a program like Excel, I was not able
+to productively apply this knowledge for quite some time. Below is a graphical
 productivity versus time investment comparison of Excel and Python from my
 personal experience.
 
@@ -47,20 +47,22 @@ personal experience.
 
 
 I wrote this document as a way for new users to learn Python programming in a
-more efficient manner. As a more experienced Python programmer, I now realize
-that many of the tasks I wanted to accomplish did not require an exhaustive
-understanding of the language.  Other tutorials proceed in step by step manner
-with substantial detail spent on each subtopic.  This is a useful approach to
-learning but is also very time consuming.  In this introduction, topics will
-be presented in the context of real world examples. Each of these examples
-will require a slightly different skill set, so new concepts, terminology, and
-third party packages will be presented as needed to get you up and running as
-quickly as possible.  My hope is that that this modified pedagogical approach
-will improve your learning curve, making it more along the lines of using a
-spreadsheet-based program (see below). Unfortunately, using a programming
-language will never be as 'easy' as a spreadsheet, but you'll see that the
-analysis power gained using programming techniques will far outweigh the time
-costs.
+more efficient manner. As a more experienced as a Python programmer, I now
+realize that many of the tasks I wanted to accomplish did not require an
+exhaustive understanding of the language. Other tutorials proceed in step by
+step manner with substantial detail spent on each subtopic. This is a useful
+approach to learning but is also very time consuming. In this introduction, I
+will start with a very brief introduction to some of the key features,
+constructs, and terminology associated with Python, but most of the advanced
+topics will be presented in the context of real world examples. Each of these
+examples requires a slightly different skill set, so new concepts,
+terminology, and third party packages will be presented as needed to get you
+up and running as quickly as possible. My hope is that that this modified
+pedagogical approach will improve your learning curve, making it more along
+the lines of using a spreadsheet-based program (see below). Unfortunately,
+using a programming language will never be as 'easy' as a spreadsheet, but
+you'll see that the analysis power gained using programming techniques will
+far outweigh the time costs.
 
 .. plot::
 
