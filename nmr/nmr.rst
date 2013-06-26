@@ -54,6 +54,8 @@ Final Product
 
     plt.plot(ppm, intensity, '-')
     plt.xlim(8.9, 0.5)
+    plt.yticks([])
+    plt.tick_params(top='off')
 
     plt.show()
 
