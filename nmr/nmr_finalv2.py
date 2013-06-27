@@ -29,7 +29,15 @@ plt.figure()
 
 # This is going to use Matplotlib's object-oriented approach to plotting,
 # which is much more powerful, but also more difficult, than the pyplot
-# approach
+# approach. This method allows us to shut off some of the lines around the
+# outside of the plot. The Matplotlib documentation has lots of info on this
+# subject. Start: http://matplotlib.org/users/artists.html
+# However, running in IPython interactive mode can help a lot here so that you
+# can inspect object attributes as the are being created. Many of the 'pyplot'
+# functions are wrappers around the object oriented interface, so you can get
+# a feel for this style by looking at the pyplot source code. In IPython, you
+# can follow the name of a function with two question marks (??) to get the
+# source for that function.
 
 # Create axes (box for plotting), which is a subset of the figure
 ax1 = plt.axes() 

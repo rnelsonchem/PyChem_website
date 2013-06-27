@@ -63,7 +63,13 @@ Final Product
 Publication Quality
 -------------------
 
-.. plot:: nmr/nmr_final.py
+Version 1:
+
+.. plot:: nmr/nmr_finalv1.py
+
+Version 2:
+
+.. plot:: nmr/nmr_finalv2.py
    
 .. _comparison operations: http://docs.python.org/2/library/stdtypes.html#comparisons
 .. _if and elif: http://docs.python.org/2/reference/compound_stmts.html#if
