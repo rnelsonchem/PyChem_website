@@ -10,6 +10,13 @@ chemical) applications.
 
 This document was last updated at |date| at |time|.
 
+The source code for this website is located on GitHub_, which contains a list
+of `recent changes`_ as well.
+
+.. _GitHub: https://github.com/rnelsonchem/PyChem_website
+.. _recent changes: https://github.com/rnelsonchem/PyChem_website/
+    commits/master
+
 Contents
 --------
 
