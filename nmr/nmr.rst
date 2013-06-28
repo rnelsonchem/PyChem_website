@@ -9,11 +9,11 @@ Make a simple plot of a Bruker NMR data set.
 Skills
 ------
 
-* Learning about `comparison operations`_ and `if and elif`_ statements.
+* Learning about `comparison operations`_ and `if, elif, and else`_ statements.
 
 * Finding items in a sequence with the `in`_ operator.
 
-* Creating a *lin*\ early *space*\ d array of numbers with Numpy's `linspace`
+* Creating a *lin*\ early *space*\ d array of numbers with Numpy's `linspace`_
   function
 
 Data
@@ -71,7 +71,11 @@ Version 2:
 
 .. plot:: nmr/nmr_finalv2.py
    
-.. _comparison operations: http://docs.python.org/2/library/stdtypes.html#comparisons
-.. _if and elif: http://docs.python.org/2/reference/compound_stmts.html#if
-.. _linspace: http://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html
-.. _in: http://docs.python.org/2/tutorial/datastructures.html#more-on-conditions
+.. _comparison operations: http://docs.python.org/2/library/
+    stdtypes.html#comparisons
+.. _if, elif, and else: http://docs.python.org/2/reference/
+    compound_stmts.html#if
+.. _linspace: http://docs.scipy.org/doc/numpy/reference/generated/
+    numpy.linspace.html
+.. _in: http://docs.python.org/2/tutorial/datastructures.html
+    #more-on-conditions
