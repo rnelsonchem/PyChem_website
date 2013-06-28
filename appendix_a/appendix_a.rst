@@ -63,6 +63,12 @@ General Purpose
 .. _curve_fit: http://docs.scipy.org/doc/scipy/reference/generated/
     scipy.optimize.curve_fit.html
 
+* nbviewer
+
+  A website that displays freely available IPython_ notebooks on the web.
+
+.. _nbviewer: http://nbviewer.ipython.org/
+.. _IPython: http://ipython.org/
 
 Chemistry
 ---------
@@ -173,6 +179,28 @@ Astronomy
   A suite of astronomy packages.
 
 .. _astropy: http://www.astropy.org/
+
+Cloud Computing Services
+------------------------
+
+* PiCloud_
+
+  An online serves for distributed computing.
+
+.. _PiCloud: http://www.picloud.com/
+
+* `Google App Engine`_
+
+  Python is used to develop Google Apps
+
+.. _Google App Engine: https://developers.google.com/appengine/docs/python/
+    gettingstartedpython27/introduction
+
+* `Amazon Web Services`_
+
+  Another site that lets you develop web applications in Python.
+
+.. _Amazon Web Services: http://aws.amazon.com/python/
 
 Documentation Generation
 ------------------------
