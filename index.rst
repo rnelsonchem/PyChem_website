@@ -21,7 +21,7 @@ Contents
 --------
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     intro
     quick/quick
@@ -46,8 +46,8 @@ Contents
 Indices and tables
 ==================
 
-* :ref:`genindex`
 * :ref:`search`
 
 .. * :ref:`modindex`
+.. * :ref:`genindex`
 
