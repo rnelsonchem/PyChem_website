@@ -35,8 +35,8 @@ Contents
     ftir/ftir
     UV/uv
     nmr/nmr
+    stats/stats
     batch/batch
-    sim/sim
     multid/multid
     multid2/distrib
     appendix_a/appendix_a
