@@ -19,20 +19,12 @@ def file_proc(file_name):
     return np.array(wn, dtype=float), np.array(ab, dtype=float)
 
 all_files = os.listdir('.')
-txt_files = []
-for f in all_files:
-    if f[-3:] == 'txt':
-        txt_files.append( f )
-# These constructs are called 'List Comprehensions' 
-# They are more compact versions of the above code, and are actually more
-# highly optimized than the for loops.
-# See: http://docs.python.org/2/tutorial/datastructures.html#list-comprehensions
-# Or: txt_files = [i for i in all_files if i[-3:] == 'txt']
-# Or: txt_files = [i for i in os.listdir('.') if i[-3:] == 'txt']
 
-for txt in txt_files:
-    wn, ab = file_proc(txt)
-    plt.plot(wn, ab, label=txt)
+for fl in all_files:
+    # Only process '*.txt' files.
+    if fl[-3:] == 'txt':
+        wn, ab = file_proc(fl)
+        plt.plot(wn, ab, label=fl)
 
 plt.xlim(500, 770)
 plt.ylim(-0.01, 0.18)

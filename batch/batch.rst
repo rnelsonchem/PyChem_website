@@ -16,11 +16,6 @@ Skills
 * Automatically read and process a series of files from a folder using
   functions from Python's built-in `os`_ module.
 
-* Learn about string customization using `string formatting`_.
-
-* Optional: Learn about the compact list generator process called `list
-  comprehension`_
-
 Data
 ----
 
@@ -46,5 +41,3 @@ Not complete...
 
 .. _os: http://docs.python.org/2/library/os.html 
 .. _custom functions: http://docs.python.org/2/tutorial/controlflow.html#defining-functions 
-.. _string formatting: http://docs.python.org/2/library/string.html#formatstrings
-.. _list comprehension: http://docs.python.org/2/tutorial/datastructures.html#list-comprehensions
