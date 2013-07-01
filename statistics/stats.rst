@@ -27,11 +27,11 @@ Final Product
 
 Linear regression:
 
-.. plot:: stats/lin.py
+.. plot:: statistics/lin.py
 
 t-test:
 
-.. plot:: stats/ttest.py
+.. plot:: statistics/ttest.py
 
 .. _random number: http://docs.scipy.org/doc/numpy/reference/
     routines.random.html 
