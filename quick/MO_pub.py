@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Read the values from the data file
-vals = np.loadtxt('MnO.csv', delimiter=',', skiprows=1, usecols=(2,))
+vals = np.loadtxt('MO.csv', delimiter=',', skiprows=1, usecols=(2,))
 
 # Set some default parameters
 plt.rc('font', size=16)
