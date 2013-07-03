@@ -14,8 +14,8 @@ saved as a comma separated value (csv) text file. The ultimate goal is to make
 a histogram of these values, so that we can determine the average (and
 extreme) distances for different metal oxygen bond types.
 
-Below are the first ten lines of the :download:`data file<./MO.csv>`: the
-full file is over 43,000 lines of *unsorted* bond distances.
+Below are the first ten lines of the :download:`data file<./MO.csv>`: the full
+file is over 43,000 lines of *unsorted* bond distances.
 
 .. literalinclude:: MO.csv
     :language: text
@@ -35,8 +35,8 @@ don't make sense.  That's the point of reading this document!)
 There. That wasn't so bad, was it? If this seems like something you'd like to
 learn, then keep reading.
 
-*BONUS*: Looking at this plot, approximate the average bond distances
-for manganese oxygen single and double bonds?
+*BONUS*: Looking at this plot, approximate the average bond distances for
+metal oxygen single and double bonds?
 
 Publication Quality Plot
 ------------------------

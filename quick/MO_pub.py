@@ -27,7 +27,7 @@ plt.xlabel(u'Distance (\u00c5)')
 plt.ylim(-40, 1820)
 plt.ylabel('Frequency')
 
-plt.title('Manganese Oxygen Distances')
+plt.title('Metal Oxygen Distances')
 
 # Add minor ticks
 plt.minorticks_on()
