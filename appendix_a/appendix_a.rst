@@ -36,6 +36,13 @@ General Purpose
 
 .. _Matplotlib: http://matplotlib.org/
 
+* Veusz_
+
+  A GUI based plotting package. This is designed to be more interactive than
+  Matplotlib but has much of the same functionality.
+
+.. _Veusz: http://home.gna.org/veusz/
+
 * Pandas_
 
   A very powerful data analysis library. Provides DataFrames, which are based
@@ -63,7 +70,7 @@ General Purpose
 .. _curve_fit: http://docs.scipy.org/doc/scipy/reference/generated/
     scipy.optimize.curve_fit.html
 
-* nbviewer
+* nbviewer_
 
   A website that displays freely available IPython_ notebooks on the web.
 
@@ -146,6 +153,19 @@ Geology
 .. _ArcGIS: http://resources.arcgis.com/en/communities/python/
 .. _ArcPy: http://help.arcgis.com/en/arcgisdesktop/10.0/help/
     index.html#//000v000000v7000000
+
+* Shapely_
+
+  Analysis of geometric (2D) objects. Apparently built on top of the GEOS and
+  ITS libraries.
+
+.. _Shapely: http://toblerity.github.io/shapely/
+
+* Basemap_
+
+  A Matplotlib toolkit for plotting on top of maps.
+
+.. _Basemap: http://matplotlib.org/basemap/
 
 Mathematics
 -----------
