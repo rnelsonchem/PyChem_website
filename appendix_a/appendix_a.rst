@@ -142,8 +142,8 @@ Biology
 
 .. _Rosalind: http://rosalind.info/problems/locations/
 
-Geology
--------
+Earth and Oceanographic Science
+-------------------------------
 
 * ArcGIS_
 
@@ -166,6 +166,12 @@ Geology
   A Matplotlib toolkit for plotting on top of maps.
 
 .. _Basemap: http://matplotlib.org/basemap/
+
+* Iris_
+
+  Visualization and analysis of meteorological and oceanographic data.
+
+.. _Iris: http://scitools.org.uk/iris/
 
 Mathematics
 -----------
