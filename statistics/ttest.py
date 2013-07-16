@@ -1,6 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as sps
+# This seeds the random number generator so that it always returns the same
+# numbers
+np.random.seed(20)
 
 samples = 50
 sigma = 0.3

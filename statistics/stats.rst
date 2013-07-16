@@ -25,11 +25,11 @@ Skills
 Final Product
 -------------
 
-Linear regression:
+Linear regression with residuals (2 plots):
 
 .. plot:: statistics/lin.py
 
-t-test:
+Simple t-tests and a histogram:
 
 .. plot:: statistics/ttest.py
 
