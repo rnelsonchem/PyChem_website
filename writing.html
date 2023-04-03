@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Writing and Running Programs &#8212; Python in Chem</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <link rel="stylesheet" href="_static/rcn_style.css" type="text/css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="IPython" href="ipython/ipython.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>PyChem</span></a></h1>
+        <h2 class="heading"><span>Writing and Running Programs</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="install.html">Installation</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="ipython/ipython.html">IPython</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="writing-and-running-programs">
+<h1>Writing and Running Programs<a class="headerlink" href="#writing-and-running-programs" title="Permalink to this heading">¶</a></h1>
+<section id="writing-program-files">
+<h2>Writing Program Files<a class="headerlink" href="#writing-program-files" title="Permalink to this heading">¶</a></h2>
+<p>Python programs are simply text (ASCII or Unicode) files, sometimes with a
+‘.py’ file extension.  Because you’ll be reading and writing a lot of these
+files, invest some time looking for a good text editor.  Do <em>NOT</em> use MS
+Notepad, Wordpad, or Word! There are many free text editors available, so
+spend a little time to look them over.  Useful features will be syntax
+highlighting (different keywords get highlighted different colors) and the
+ability to uses spaces rather than tabs (see <a class="reference internal" href="#pitfalls"><span class="std std-ref">Pitfalls</span></a> below). All three
+of the all-in-one installers come with a nice text editor. Anaconda and
+Python(x,y) come with Spyder; Canopy has a built-in editor. (Spyder is
+probably the best. See <a class="reference internal" href="appendix_b/appendix_b.html"><span class="doc">Appendix B</span></a> for info on
+how to set up Spyder and also install it in Canopy.)</p>
+</section>
+<section id="running-programs">
+<h2>Running Programs<a class="headerlink" href="#running-programs" title="Permalink to this heading">¶</a></h2>
+<p>With some Python installations, ‘.py’ files are associated with the Python
+interpreter, so these programs run by simply double clicking on the icon.  If
+this is not the case, things can be trickier (but not overly difficult).  You
+need to know how to use the terminal, which is also called the command prompt
+on Windows. (Although, we’ll just call it terminal from now on.) A quick
+search on the <a class="reference external" href="http://google.com">internet</a> will turn up lots of useful information on how to
+open a terminal for your particular OS. From the terminal, type <code class="docutils literal notranslate"><span class="pre">python</span>
+<span class="pre">file_name.py</span></code> to run the program, as long as your program is in the current
+working folder of the terminal. If not, then you’ll need to use the commands
+below.</p>
+<p>There are a couple of commands that are essential to know to effectively use a
+terminal.  First of all, you can move to different folders with the <code class="docutils literal notranslate"><span class="pre">cd</span></code>
+command, which stands for ‘change directory’ or ‘current directory’ (directory
+= folder). On Windows, typing <code class="docutils literal notranslate"><span class="pre">cd</span></code> on its own will tell you the current
+folder location.  On Mac and Linux machines, the command <code class="docutils literal notranslate"><span class="pre">pwd</span></code>, or ‘present
+working directory’, prints the current location. Below is an example of what
+this might look like on a Mac.  (The <code class="docutils literal notranslate"><span class="pre">$</span></code> character denotes an input line of
+the terminal and should not be explicitly typed out. The slashes need to be
+reversed for Mac/Linux systems.):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pwd
+/Users/Ryan Nelson/
+$ cd /Users/Ryan Nelson/Desktop/Test Folder/
+$ python myprogram.py
+</pre></div>
+</div>
+</section>
+<section id="interactive-shell">
+<h2>Interactive Shell<a class="headerlink" href="#interactive-shell" title="Permalink to this heading">¶</a></h2>
+<p>For many scientific applications, writing programs will actually be the final
+step in the process. This is because Python comes equipped with a very nice
+interactive interpreter, or shell. The shell can be accessed by simply typing
+<code class="docutils literal notranslate"><span class="pre">python</span></code> in the terminal, after which, you will see a <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> prompt appear.
+At this point, anything you type is interpreted as a line of Python code, and
+is executed once you type ‘Enter’. In this way, you can test out short bits of
+code to see what they do. For example, try the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python
+Python 2.7.3 (default, Apr 10 2012, 23:31:26) [MSC v.1500 32 bit (Intel)] on win32
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; 3+2
+5
+&gt;&gt;&gt; print &#39;Hello world&#39;
+Hello world
+&gt;&gt;&gt; 3.7/4.8
+0.7708333333333334
+&gt;&gt;&gt; exit() # or Ctrl-d
+</pre></div>
+</div>
+</section>
+<section id="python-ides">
+<h2>Python IDEs<a class="headerlink" href="#python-ides" title="Permalink to this heading">¶</a></h2>
+<p>Python has a number of Integrated Development Environments (IDE) that combine
+both text editors and interactive shells into one program. Spyder is one
+example of an IDE, and we’ll assume you’re using that for the rest of this
+intro. Once you open a file with Spyder, you can run it by typing the ‘F5’
+key, or pressing the little green circle with a runner inside.</p>
+</section>
+<section id="pitfalls">
+<span id="id1"></span><h2>Pitfalls<a class="headerlink" href="#pitfalls" title="Permalink to this heading">¶</a></h2>
+<p>There are a few things that will potentially cause problems when you’re first
+getting started programming. A few of these - file extensions, tabs vs spaces,
+return characters – are detailed here for reference. Others will be pointed
+out as needed.</p>
+<p>Knowing full file extensions will be very important. For example,
+‘file_name.py’ is very different from ‘file_name.py.txt’. Be sure to tell you
+operating system to display file extensions for every file.  Information on
+how to accomplish this can be <a class="reference external" href="http://google.com/">found on the web</a>.</p>
+<p>Before you start writing Python programs, be sure to tell your text editor to
+use a specific number of spaces (usually 4) rather than tab characters. Spaces
+and tabs are both special characters in text files. We perceive spaces and
+tabs to be either a single space or multiple spaces between characters,
+respectively.  However, to the computer reading the text file, a space and a
+tab are both a single character. Unfortunately, there is no uniform definition
+for how many spaces represent one tab. Some computers may treat this as 4
+spaces, others 2 spaces, and still others 8 spaces. This is a big problem for
+Python, because the initial indentation of a line has a very special meaning.
+If you mix tab characters and spaces, you code may run fine for a while, but
+it will most likely not be portable and may break when you upgrade your Python
+installation. You’ve been warned. Most dedicated Python editors and IDEs, such
+as Spyder, automatically set tabs to be 4 spaces.</p>
+<p>Another minor annoyance is the way different operating systems represent new
+line in a text file. Again, we perceive new lines as a break that moves us
+to the next line in a file; however, depending on the OS, new lines are
+defined as one or more special characters. Unfortunately,  each
+operating system uses slightly different sequences of new line characters. If
+you’re trying to read a text file, and you find that it behaves differently
+than you’d expect, it may be due to this issue. Again, the web has a lot of
+resources to help you work through this problem, so I won’t detail the
+solutions here.</p>
+<p>Now that we’ve seen how to write and run some programs, let’s get to the good
+stuff.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="install.html">Installation</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="ipython/ipython.html">IPython</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, Ryan Nelson.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

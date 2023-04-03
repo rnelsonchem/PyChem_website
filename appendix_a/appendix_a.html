@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Appendix A &#8212; Python in Chem</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" href="../_static/rcn_style.css" type="text/css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Appendix B" href="../appendix_b/appendix_b.html" />
+    <link rel="prev" title="NDim. Sim. - Distribution Diagrams" href="../multid2/distrib.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>PyChem</span></a></h1>
+        <h2 class="heading"><span>Appendix A</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../multid2/distrib.html">NDim. Sim. - Distribution Diagrams</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../appendix_b/appendix_b.html">Appendix B</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="appendix-a">
+<h1>Appendix A<a class="headerlink" href="#appendix-a" title="Permalink to this heading">¶</a></h1>
+<p>This is a partial listing of third party packages and programs that
+incorporate Python for various scientific disciplines. In some cases, it can
+be useful to look at <a class="reference external" href="https://code.google.com/p/pythonxy/wiki/StandardPlugins">Python(x,y)</a>, <a class="reference external" href="http://docs.continuum.io/anaconda/pkgs.html">Anaconda</a>, and <a class="reference external" href="https://www.enthought.com/products/canopy/package-index/">Canopy</a> package lists
+for a more complete listing.</p>
+<section id="general-purpose">
+<h2>General Purpose<a class="headerlink" href="#general-purpose" title="Permalink to this heading">¶</a></h2>
+<ul>
+<li><p><a class="reference external" href="http://www.numpy.org/">Numpy</a></p>
+<p>Provides N-dimensional numerical array objects and some linear algebra
+routines. Pretty much the base of every scientific package for Python.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://www.scipy.org/">Scipy</a></p>
+<p>A broad range of scientific functions for integration, optimization, linear
+algebra, Fourier transforms, image processing, etc. See the <a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/">documentation</a>
+for more details.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://matplotlib.org/">Matplotlib</a></p>
+<p>The de facto 2D plotting library for Python. Has some limited 3D
+capabilities as well.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://home.gna.org/veusz/">Veusz</a></p>
+<p>A GUI based plotting package. This is designed to be more interactive than
+Matplotlib but has much of the same functionality.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://pandas.pydata.org/">Pandas</a></p>
+<p>A very powerful data analysis library. Provides DataFrames, which are based
+on a similar concept in R, which essentially act like Excel spreadsheets on
+steroids.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://www.pytables.org/moin">PyTables</a></p>
+<p>A package for working with HDF5 files, which are an open-source file type
+designed for working with very large amounts of data. This is very useful if
+you have really large amounts of data that won’t fit entirely into memory.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://newville.github.io/lmfit-py/">lmfit-py</a></p>
+<p>An extension of Scipy’s non-linear least squares functions, <a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.leastsq.html">leastsq</a> and
+<a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html">curve_fit</a>, that lets you set bounds on parameters</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://nbviewer.ipython.org/">nbviewer</a></p>
+<p>A website that displays freely available <a class="reference external" href="http://ipython.org/">IPython</a> notebooks on the web.</p>
+</li>
+</ul>
+</section>
+<section id="chemistry">
+<h2>Chemistry<a class="headerlink" href="#chemistry" title="Permalink to this heading">¶</a></h2>
+<ul>
+<li><p><a class="reference external" href="https://code.google.com/p/nmrglue/">nmrglue</a></p>
+<p>A module for working with NMR data in Python</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://www.bruker.com/products/mr/nmr/nmr-software/software/topspin/overview.html">Topspin</a></p>
+<p>Bruker’s NMR control and processing software uses Python for automation and
+pulse sequence design.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://avogadro.openmolecules.net/wiki/Main_Page">Avogadro</a></p>
+<p>A 3D molecule builder and viewer. This uses Python for scripting.  A newer
+version is being developed by Kitware.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://chempython.org/">ChemPython</a></p>
+<p>Python for chemical informatics</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://chembionews.cambridgesoft.com/featureclips/Default.aspx?featureclipID=155">ChemDraw and ChemFinder</a></p>
+<p>Python is used as the internal scripting language for these products.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://cars.uchicago.edu/xraylarch/">Larch</a></p>
+<p>A software for analysis of XAS data. The next generation of IFeffit.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://pymca.sourceforge.net/index.html">PyMca</a></p>
+<p>X-ray fluorescence toolkit, developed as ESRF</p>
+</li>
+</ul>
+</section>
+<section id="biology">
+<h2>Biology<a class="headerlink" href="#biology" title="Permalink to this heading">¶</a></h2>
+<ul>
+<li><p><a class="reference external" href="http://biopython.org/wiki/Main_Page">Biopython</a></p>
+<p>Freely available tools for biological computations.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://rosalind.info/problems/locations/">Rosalind</a></p>
+<p>Platform for bioinformatics.</p>
+</li>
+</ul>
+</section>
+<section id="earth-and-oceanographic-science">
+<h2>Earth and Oceanographic Science<a class="headerlink" href="#earth-and-oceanographic-science" title="Permalink to this heading">¶</a></h2>
+<ul>
+<li><p><a class="reference external" href="http://resources.arcgis.com/en/communities/python/">ArcGIS</a></p>
+<p>ArcGIS uses Python as its scripting language for automation through it’s
+<a class="reference external" href="http://help.arcgis.com/en/arcgisdesktop/10.0/help/index.html#//000v000000v7000000">ArcPy</a> module.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://toblerity.github.io/shapely/">Shapely</a></p>
+<p>Analysis of geometric (2D) objects. Apparently built on top of the GEOS and
+ITS libraries.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://matplotlib.org/basemap/">Basemap</a></p>
+<p>A Matplotlib toolkit for plotting on top of maps.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://scitools.org.uk/iris/">Iris</a></p>
+<p>Visualization and analysis of meteorological and oceanographic data.</p>
+</li>
+</ul>
+</section>
+<section id="mathematics">
+<h2>Mathematics<a class="headerlink" href="#mathematics" title="Permalink to this heading">¶</a></h2>
+<ul>
+<li><p><a class="reference external" href="http://www.sagemath.org/">Sage</a></p>
+<p>Ridiculously powerful mathematics software that uses Python as it’s
+interface language. Aims to be an open-source alternative to Mathematica,
+Matlab, etc.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://sympy.org/en/index.html">SymPy</a></p>
+<p>Symbolic mathematics library. Very useful if you don’t need all of the stuff
+that comes with Sage.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://statsmodels.sourceforge.net/">statsmodels</a></p>
+<p>Statistical modeling package.</p>
+</li>
+</ul>
+</section>
+<section id="astronomy">
+<h2>Astronomy<a class="headerlink" href="#astronomy" title="Permalink to this heading">¶</a></h2>
+<ul>
+<li><p><a class="reference external" href="http://www.astropy.org/">astropy</a></p>
+<p>A suite of astronomy packages.</p>
+</li>
+</ul>
+</section>
+<section id="cloud-computing-services">
+<h2>Cloud Computing Services<a class="headerlink" href="#cloud-computing-services" title="Permalink to this heading">¶</a></h2>
+<ul>
+<li><p><a class="reference external" href="http://www.picloud.com/">PiCloud</a></p>
+<p>An online serves for distributed computing.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="https://developers.google.com/appengine/docs/python/gettingstartedpython27/introduction">Google App Engine</a></p>
+<p>Python is used to develop Google Apps</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://aws.amazon.com/python/">Amazon Web Services</a></p>
+<p>Another site that lets you develop web applications in Python.</p>
+</li>
+</ul>
+</section>
+<section id="documentation-generation">
+<h2>Documentation Generation<a class="headerlink" href="#documentation-generation" title="Permalink to this heading">¶</a></h2>
+<ul>
+<li><p><a class="reference external" href="http://sphinx-doc.org/">Sphinx</a></p>
+<p>The standard Python documenation system. Used to make the main Python
+documenation. This website is a Sphinx-generated site.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="http://www.dexy.it/features/">Dexy</a></p>
+<p>Another more recent documentation system for scientific document automation.</p>
+</li>
+</ul>
+<ul>
+<li><p><a class="reference external" href="https://code.google.com/p/rst2pdf/">rst2pdf</a></p>
+<p>Convert <a class="reference external" href="http://docutils.sourceforge.net/rst.html">restructuredtext</a> files to pdf documents.</p>
+</li>
+</ul>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../multid2/distrib.html">NDim. Sim. - Distribution Diagrams</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../appendix_b/appendix_b.html">Appendix B</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, Ryan Nelson.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

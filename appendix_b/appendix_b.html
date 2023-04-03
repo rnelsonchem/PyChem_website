@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Appendix B &#8212; Python in Chem</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" href="../_static/rcn_style.css" type="text/css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Appendix A" href="../appendix_a/appendix_a.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>PyChem</span></a></h1>
+        <h2 class="heading"><span>Appendix B</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../appendix_a/appendix_a.html">Appendix A</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="appendix-b">
+<h1>Appendix B<a class="headerlink" href="#appendix-b" title="Permalink to this heading">¶</a></h1>
+<section id="update-packages">
+<h2>Update Packages<a class="headerlink" href="#update-packages" title="Permalink to this heading">¶</a></h2>
+<p>After installing Canopy, the installer should ask you if you’d like to run the
+Canopy program. You should say ‘yes’. If not, then run Canopy right after
+installation. The first time you run the program, a dialog pops up to tell you
+that it is finishing the installation. When that is completed, you can click
+okay, but make sure that the check box ‘Make Canopy the Default Python’ is
+selected.</p>
+<p>Make sure to login to the Canopy servers using the ‘Login’ button. This is
+highlighted in the picture below.</p>
+<a class="reference internal image-reference" href="../_images/canopy_no_login.png"><img alt="../_images/canopy_no_login.png" src="../_images/canopy_no_login.png" style="width: 383.59999999999997px; height: 478.79999999999995px;" /></a>
+<p>Next, click the ‘Package Manager’ button, which should open a new window
+(shown below). This utility provides a very convenient means of installing
+third-party packages into your Python environment. You can also use it to keep
+all of your installed packages updated with their most recent versions. On the
+left, you’ll see an ‘Updates’ button. Click that to see what packages need to
+be updated. Then click the ‘Install all Updates’ button at the lower right.
+(You should do this procedure fairly regularly to make sure things are at
+their most recent state.) Be patient while this works it’s magic. The packages
+will slowly disappear as they are installed. If you get a bunch of ‘Package
+Manager Errors’, you may not be logged into the Canopy server. Try logging out
+and then back in to the server. If that doesn’t work, close the program and
+then reopen it.</p>
+<a class="reference internal image-reference" href="../_images/canopy_all_pkgs.png"><img alt="../_images/canopy_all_pkgs.png" src="../_images/canopy_all_pkgs.png" style="width: 571.1999999999999px; height: 446.59999999999997px;" /></a>
+</section>
+<section id="install-spyder">
+<h2>Install Spyder<a class="headerlink" href="#install-spyder" title="Permalink to this heading">¶</a></h2>
+<p>Spyder is an nice text editor with a built in (I)Python interpreter. Having a
+dedicated environment like this can be very convenient for developing your own
+code, so it can be nice to have this installed. There is already a code editor
+built into Canopy. However, it is fairly new, and doesn’t have some of the
+features that I think are necessary for an introductory editor.</p>
+<p>At the time of writing, Spyder is not compatible with the most recent version
+of IPython in Canopy, so we need to install an older version as well. To do
+this, open the Canopy ‘Package Manager’ and search for IPython. Click to
+highlight the IPython package and then click the ‘More Info’ button. At the
+bottom of the window, a small dialog will say ‘There are <em>XXX</em> versions of
+this package’ with a button labeled ‘Show’. Click this button. Click the most
+recent IPython 0.13 package that is available in the repository, and then
+click the install button that appears to the right.</p>
+<p>Next, you’ll need to install another, command-line-based package manager,
+called ‘pip’. To do this, open a terminal window, which will be ‘cmd.exe’ on
+Windows or ‘terminal.app’ on MacOSX. At the terminal prompt, type
+‘easy_install pip’.  This will install another package manager called ‘pip’,
+which is quite useful. If a dialog box pops up about installing something new,
+be sure to click ‘Okay’.</p>
+<p>Now at the terminal prompt, type ‘pip install spyder’, which should install
+Spyder. After that is done, type ‘spyder’ at the terminal prompt, and Spyder
+should start up for the first time (may be a little slow the first time).</p>
+</section>
+<section id="setup-spyder">
+<h2>Setup Spyder<a class="headerlink" href="#setup-spyder" title="Permalink to this heading">¶</a></h2>
+<p>When you first open Spyder, there will be a number of windows open. Many of
+which will be unnecessary.</p>
+<a class="reference internal image-reference" href="../_images/spyder1.png"><img alt="../_images/spyder1.png" src="../_images/spyder1.png" style="width: 683.0px; height: 364.0px;" /></a>
+<p>In order to get Spyder into a good working state, you can try the following
+<a class="reference download internal" download="" href="../_downloads/9757b39ab898e71ea31837f6565ed9a8/spyder_ini_file"><code class="xref download docutils literal notranslate"><span class="pre">initialization</span> <span class="pre">file</span></code></a>. After downloading this
+file to your computer, find your personal Spyder directory, which will be a
+folder called ‘.spyder’. In Windows, this will be ‘C:\Users\<em>user_name</em>’
+(where <em>user_name</em> is your login name), and on Mac, it will be the the
+directory where you start when you open a new terminal (type ‘pwd’ in a
+terminal window). In this folder, there will be a file called ‘.spyder.ini’.
+The period in the front of the file name will make it hidden on Macs, so you
+may have to Monkey with some settings. Delete the ‘.spyder.ini’ file in this
+folder, and replace it with the one that you’ve just downloaded.  Be sure to
+change the file name to ‘.spyder.ini’ (with the period in the beginning). If
+everything works, you should get a new Spyder window that looks something like
+below.  If this file goofs up Spyder, close the program, delete your ‘.spyder’
+folder, and restart Spyder.</p>
+<a class="reference internal image-reference" href="../_images/spyder3.png"><img alt="../_images/spyder3.png" src="../_images/spyder3.png" style="width: 683.0px; height: 364.0px;" /></a>
+</section>
+<section id="double-click-able-python-files">
+<h2>‘Double-Click’-able Python Files<a class="headerlink" href="#double-click-able-python-files" title="Permalink to this heading">¶</a></h2>
+<p>TBD.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../appendix_a/appendix_a.html">Appendix A</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, Ryan Nelson.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

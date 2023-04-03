@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>IPython &#8212; Python in Chem</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" href="../_static/rcn_style.css" type="text/css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python Basics Part 1" href="../basics1.html" />
+    <link rel="prev" title="Writing and Running Programs" href="../writing.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>PyChem</span></a></h1>
+        <h2 class="heading"><span>IPython</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../writing.html">Writing and Running Programs</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../basics1.html">Python Basics Part 1</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="ipython">
+<span id="ipy"></span><h1>IPython<a class="headerlink" href="#ipython" title="Permalink to this heading">¶</a></h1>
+<p>The default Python shell is convenient but has limited functionality.
+<a class="reference external" href="http://ipython.org/">IPython</a>, an advanced interactive interpreter, was developed to address
+these problems. IPython consists of many different interfaces: the simplest is
+accessed from the terminal by typing <code class="docutils literal notranslate"><span class="pre">ipython</span></code>. Although it appears very
+similar to the regular Python shell, IPython has a number of special features,
+such as command history memory, introspection tools, syntax coloring, and
+built-in macros.  Over the past couple of years in particular, IPython has
+become of very powerful tool, and it’s use is always recommended over the
+regular Python shell. In addition to terminal-based IPython, two much more
+powerful IPython interfaces have recently been added – the <a class="reference internal" href="#qtconsole"><span class="std std-ref">Qt Console</span></a>
+and <a class="reference internal" href="#notebook"><span class="std std-ref">Notebook</span></a> – which will be described below.</p>
+<p>IPython has many built-in ‘magic’ commands, which are essentially convenience
+macros. Several of these commands are very important, because they make the
+IPython shell behave in much the same way as a terminal window. These commands
+are preceded by a <code class="docutils literal notranslate"><span class="pre">%</span></code>, and the most important are going to be <code class="docutils literal notranslate"><span class="pre">%cd</span></code>,
+<code class="docutils literal notranslate"><span class="pre">%pwd</span></code>, and <code class="docutils literal notranslate"><span class="pre">%run</span></code>. The first two do the same thing as described for the
+terminal. The last one is special. The run magic allows you to run a Python
+program file from inside the IPython session. All of the code that was in that
+file will then be loaded into IPython just as if you had typed it in by hand.
+This is a very useful way to build up a program file and inspect the data as
+it is being generated. A full listing of other magic commands can be found on
+the web or in the ‘Magic’ drop-down menu in the Qt Console.</p>
+<section id="qt-console">
+<span id="qtconsole"></span><h2>Qt Console<a class="headerlink" href="#qt-console" title="Permalink to this heading">¶</a></h2>
+<p>The Qt Console is an IPython shell inside of a nice GUI window, which gives
+you some drop down menus and the ability to cut-and-paste (not possible from
+terminal IPython in Windows). It can be accessed by typing <code class="docutils literal notranslate"><span class="pre">ipython</span>
+<span class="pre">qtconsole</span></code> in the terminal. This is also the shell interface that you see
+when using Spyder.  This IPython front end should always be preferred when you
+need a Python shell.</p>
+</section>
+<section id="notebook">
+<span id="id1"></span><h2>Notebook<a class="headerlink" href="#notebook" title="Permalink to this heading">¶</a></h2>
+<p>The IPython notebook is a web-based interactive shell, which is started from
+the terminal via <code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">notebook</span></code>. This command should open your web
+browser to the ‘IPython Dashboard’, which will look pretty empty at first. The
+‘New Notebook’ button on the top right can be used to start an interactive
+session. Each notebook acts as its own IPython session, and you can have as
+many notebooks running as you’d like.</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/notebook_dashboard.png"><img alt="../_images/notebook_dashboard.png" src="../_images/notebook_dashboard.png" style="width: 683.0px; height: 364.0px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Figure 1</strong>: <em>The Notebook Dashboard that you first see when starting the
+IPython Notebook interface</em></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/notebook_empty.png"><img alt="../_images/notebook_empty.png" src="../_images/notebook_empty.png" style="width: 683.0px; height: 364.0px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Figure 2</strong>: <em>An empty IPython Notebook ready to run some code.</em></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Coding is a bit different in the notebook than the other Python shells. In
+notebooks, one or more lines of code are input into cells.  To run a cell, you
+either type ‘Shift-Enter’ or ‘Ctrl-Enter’, each of which does slightly
+different things. Try them out for yourself to see the difference. The
+advantage of the notebook interface is that you can still work interactively
+with your data, but you can save the notebooks as well come back to them at a
+later time. (Saving is accomplished using the disk icon at the upper left
+corner or under File-&gt;Save…) In this way, the notebooks function quite a bit
+like our Python IDEs, but you can save displayed intermediate data at any
+point along the way.</p>
+<p>For this tutorial, some of the examples will be downloadable as interactive
+notebooks files. Each notebook is simply a specially-formatted text file, and
+they can be saved into any folder you’d like.  In order to run a particular
+notebook, you need to navigate to the folder using the terminal, and type
+<code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">notebook</span></code> from that location.  This will require that you know how
+to navigate to different folders using the terminal (see above). If you can
+double-click Python files to run them, then the <a class="reference download internal" download="" href="../_downloads/84d05f1ad04545bc3642e4f9c21115b7/run_notebook.py"><code class="xref download docutils literal notranslate"><span class="pre">following</span> <span class="pre">Python</span>
+<span class="pre">program</span></code></a> can be used to open the IPython notebook in whatever
+folder it resides.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../writing.html">Writing and Running Programs</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../basics1.html">Python Basics Part 1</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, Ryan Nelson.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

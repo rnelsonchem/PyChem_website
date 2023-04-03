@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Simple Statistics &#8212; Python in Chem</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" href="../_static/rcn_style.css" type="text/css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Batch Processing Plots" href="../batch/batch.html" />
+    <link rel="prev" title="Plotting Bruker NMR Data" href="../nmr/nmr.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>PyChem</span></a></h1>
+        <h2 class="heading"><span>Simple Statistics</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../nmr/nmr.html">Plotting Bruker NMR Data</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../batch/batch.html">Batch Processing Plots</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="simple-statistics">
+<h1>Simple Statistics<a class="headerlink" href="#simple-statistics" title="Permalink to this heading">¶</a></h1>
+<section id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this heading">¶</a></h2>
+<p>Learn to do linear regressions and t-tests with simulated data.</p>
+</section>
+<section id="skills">
+<h2>Skills<a class="headerlink" href="#skills" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Simulate noisy data with Numpy’s <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/routines.random.html">random number</a> generators</p></li>
+<li><p>Fit data with Scipy’s <a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html">linregress</a> function</p></li>
+<li><p>Fit data with Numpy’s <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.polyfit.html">polyfit</a> function and <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.poly1d.html">poly1d</a> object</p></li>
+<li><p>Do simple t-tests with Scipy’s <a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_1samp.html">ttest_1samp</a>, <a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html">ttest_ind</a>, and <a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html">ttest_rel</a></p></li>
+<li><p>Make a plot with Matplotlib’s <a class="reference external" href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.hist">hist</a> function</p></li>
+<li><p>Creating a custom text string using <a class="reference external" href="http://docs.python.org/2/library/string.html#formatstrings">string formatting</a></p></li>
+</ul>
+</section>
+<section id="final-product">
+<h2>Final Product<a class="headerlink" href="#final-product" title="Permalink to this heading">¶</a></h2>
+<p>Linear regression with residuals (2 plots):</p>
+<p>(<a class="reference download internal" download="" href="../_downloads/fbd3b54b1286e4d09037588c3f48c370/lin.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>)</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/lin_00.png" class="plot-directive" src="../_images/lin_00.png" />
+<figcaption>
+<p><span class="caption-text">(<a class="reference download internal" download="" href="../_downloads/238094018816125182364843f1709083/lin_00.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/67d875f6c509ff1806277c2332ae1703/lin_00.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/998d94962dae4ddbe0da3b2605122cae/lin_00.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<img alt="../_images/lin_01.png" class="plot-directive" src="../_images/lin_01.png" />
+<figcaption>
+<p><span class="caption-text">(<a class="reference download internal" download="" href="../_downloads/9cf5b938e87d5ba8975f7e0da9e26155/lin_01.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/6d93b8c608a7945c5e17607657c34afd/lin_01.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/e7a3e5073b572de7cf48808e1fc857d7/lin_01.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Simple t-tests and a histogram:</p>
+<p>(<a class="reference download internal" download="" href="../_downloads/390d35b4763d221fdd4e87764dd6c2f2/ttest.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../_downloads/afdc9c6165b47ba252a8ae5e2be0df26/ttest.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/93ac7dcf19a0ee41ce9a05b3feb02b77/ttest.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../_downloads/2e16eae4c32e01b24371daf11cbf8a3f/ttest.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../_images/ttest.png" class="plot-directive" src="../_images/ttest.png" />
+</figure>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../nmr/nmr.html">Plotting Bruker NMR Data</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../batch/batch.html">Batch Processing Plots</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, Ryan Nelson.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

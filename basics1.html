@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Python Basics Part 1 &#8212; Python in Chem</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <link rel="stylesheet" href="_static/rcn_style.css" type="text/css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python Basics Part 2" href="basics2.html" />
+    <link rel="prev" title="IPython" href="ipython/ipython.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>PyChem</span></a></h1>
+        <h2 class="heading"><span>Python Basics Part 1</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="ipython/ipython.html">IPython</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="basics2.html">Python Basics Part 2</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="python-basics-part-1">
+<h1>Python Basics Part 1<a class="headerlink" href="#python-basics-part-1" title="Permalink to this heading">¶</a></h1>
+<p>This section details some of the most basic information that you’ll need to
+write Python code. It certainly won’t be comprehensive, but it should give you
+a good start.</p>
+<section id="data-type-overview">
+<h2>Data Type Overview<a class="headerlink" href="#data-type-overview" title="Permalink to this heading">¶</a></h2>
+<p>Python has several built-in data types. To simplify our introduction, we’ll
+narrow our focus to just a few: none, booleans, integers, floating point
+numbers, complex numbers, strings, and lists (tuples). Types that not covered
+here are dictionaries and sets, which are extremely useful but not necessary
+for the examples presented here.</p>
+</section>
+<section id="none">
+<h2>None<a class="headerlink" href="#none" title="Permalink to this heading">¶</a></h2>
+<p>The special term <code class="docutils literal notranslate"><span class="pre">None</span></code> can be used as a placeholder to represent nothing.
+It seems like this wouldn’t be at all useful, but it can be quite helpful at
+times.</p>
+</section>
+<section id="booleans">
+<h2>Booleans<a class="headerlink" href="#booleans" title="Permalink to this heading">¶</a></h2>
+<p>Boolean is just a fancy term that we use for true and false. There are two
+ways to represent both of these values in Python. For true, you can either use
+<code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">True</span></code> (first letter must be capitalized): for false, use either
+<code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. The <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code> versions will still work in math
+equations, if you use them in that context. Booleans are going to be most
+useful when we look at comparison testing later.</p>
+</section>
+<section id="numbers-in-python">
+<h2>Numbers in Python<a class="headerlink" href="#numbers-in-python" title="Permalink to this heading">¶</a></h2>
+<p>There are three different types of numbers in Python: integers, floating
+point, and complex. There are some very important caveats to using numbers,
+and those will be outlined after these types are introduced. All numbers can
+be manipulated using the standard arithmetic operators, which are shown
+below.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> - Addition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> - Subtraction</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> - Multiplication</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/</span></code> - Division</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**</span></code> - Power</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%</span></code> - Modulo (gives you the remainder of a division)</p></li>
+</ul>
+</div></blockquote>
+<p>Mathematical operators have an execution precedence, which means that certain
+operations are done before others. This is true of any computer program or
+calculator, so it is important to keep this in mind. I don’t know the exact
+order, and perhaps very few others do either. To be safe, use parentheses
+(<code class="docutils literal notranslate"><span class="pre">()</span></code>) judiciously to avoid any problems. Here’s an example of what I mean.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}3 * 2^{3} = ?\\(3 * 2)^{3} = 216\\3 * (2^{3}) = 24\end{aligned}\end{align} \]</div>
+<p>And in Python:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
+<span class="gh">Out[1]: </span><span class="go">24</span>
+</pre></div>
+</div>
+</section>
+<section id="integers">
+<h2>Integers<a class="headerlink" href="#integers" title="Permalink to this heading">¶</a></h2>
+<p>Integers are any number that does not have a decimal point. These values can
+be represented exactly by a computer, and in Python, they can be any size
+(although very long numbers will end in ‘L’, which you can ignore).
+<a class="reference internal" href="#strings"><span class="std std-ref">Strings</span></a> and floating point numbers can be forced to integers
+with the <code class="docutils literal notranslate"><span class="pre">int</span></code> <a class="reference internal" href="basics2.html#functions"><span class="std std-ref">function</span></a>. For example:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="mi">4</span> <span class="o">+</span> <span class="mi">7</span>
+<span class="gh">Out[1]: </span><span class="go">11</span>
+
+<span class="gp">In [2]: </span><span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[2]: </span><span class="go">24</span>
+
+<span class="gp">In [3]: </span><span class="mi">314</span><span class="o">**</span><span class="mi">23</span>
+<span class="gh">Out[3]: </span><span class="go">2687706896485028279945969132153957153803623321581014482944L</span>
+
+<span class="gp">In [4]: </span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;7&#39;</span><span class="p">)</span>
+<span class="gh">Out[4]: </span><span class="go">7</span>
+
+<span class="gp">In [5]: </span><span class="nb">int</span><span class="p">(</span><span class="mf">7.0</span><span class="p">)</span>
+<span class="gh">Out[5]: </span><span class="go">7</span>
+</pre></div>
+</div>
+</section>
+<section id="floating-point">
+<h2>Floating Point<a class="headerlink" href="#floating-point" title="Permalink to this heading">¶</a></h2>
+<p>Floating point numbers (or float) have a decimal, even if the number after the
+decimal is zero or nonexistent. These numbers have a certain precision
+associated with them, which means that there are a limited number of digits
+that can be displayed after the decimal. Exponential multiples of 10 can be
+represented with the <code class="docutils literal notranslate"><span class="pre">e</span></code> suffix notation. <a class="reference internal" href="#strings"><span class="std std-ref">Strings</span></a> and
+integers can be forced to floating point values with the <code class="docutils literal notranslate"><span class="pre">float</span></code> function.
+For example:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="mf">4.7</span><span class="o">*</span><span class="mf">1.4</span>
+<span class="gh">Out[1]: </span><span class="go">6.58</span>
+
+<span class="gp">In [2]: </span><span class="mf">3.2</span><span class="o">/</span><span class="mf">1.99</span>
+<span class="gh">Out[2]: </span><span class="go">1.6080402010050252</span>
+
+<span class="gp">In [3]: </span><span class="mf">1e13</span>
+<span class="gh">Out[3]: </span><span class="go">10000000000000.0</span>
+
+<span class="gp">In [4]: </span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;7&#39;</span><span class="p">)</span>
+<span class="gh">Out[4]: </span><span class="go">7.0</span>
+
+<span class="gp">In [5]: </span><span class="nb">float</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="gh">Out[5]: </span><span class="go">7.0</span>
+</pre></div>
+</div>
+</section>
+<section id="complex-numbers">
+<h2>Complex Numbers<a class="headerlink" href="#complex-numbers" title="Permalink to this heading">¶</a></h2>
+<p>Complex numbers have a real and imaginary component, the latter is indicated
+by a trailing <code class="docutils literal notranslate"><span class="pre">j</span></code>. Both the real and imaginary component can be integers or
+floating point numbers. <a class="reference internal" href="#strings"><span class="std std-ref">Strings</span></a>, floats, and integers
+can be forced to complex numbers with the <code class="docutils literal notranslate"><span class="pre">complex</span></code> function. For example:</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="mf">1.7</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
+<span class="gh">Out[1]: </span><span class="go">(1.7+4j)</span>
+
+<span class="gp">In [2]: </span><span class="p">(</span><span class="mf">1.7</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.2</span><span class="o">-</span><span class="mf">2.8</span><span class="n">j</span><span class="p">)</span>
+<span class="gh">Out[2]: </span><span class="go">(13.239999999999998+0.040000000000000036j)</span>
+
+<span class="gp">In [3]: </span><span class="nb">complex</span><span class="p">(</span><span class="s1">&#39;7&#39;</span><span class="p">)</span>
+<span class="gh">Out[3]: </span><span class="go">(7+0j)</span>
+
+<span class="gp">In [4]: </span><span class="nb">complex</span><span class="p">(</span><span class="s1">&#39;7+2j&#39;</span><span class="p">)</span>
+<span class="gh">Out[4]: </span><span class="go">(7+2j)</span>
+
+<span class="gp">In [5]: </span><span class="nb">complex</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="gh">Out[5]: </span><span class="go">(7+0j)</span>
+</pre></div>
+</div>
+</section>
+<section id="math-pitfalls">
+<h2>Math Pitfalls<a class="headerlink" href="#math-pitfalls" title="Permalink to this heading">¶</a></h2>
+<p>You can mix number types in calculations, and the answer will always be
+represented by the most complex partner. Here are some examples.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span>
+<span class="gh">Out[1]: </span><span class="go">3</span>
+
+<span class="gp">In [2]: </span><span class="mi">1</span><span class="o">+</span><span class="mf">2.</span>
+<span class="gh">Out[2]: </span><span class="go">3.0</span>
+
+<span class="gp">In [3]: </span><span class="mi">7</span><span class="o">*</span><span class="mi">10</span>
+<span class="gh">Out[3]: </span><span class="go">70</span>
+
+<span class="gp">In [4]: </span><span class="mf">7.</span><span class="o">*</span><span class="mi">10</span>
+<span class="gh">Out[4]: </span><span class="go">70.0</span>
+
+<span class="gp">In [5]: </span><span class="mi">32</span><span class="o">**</span><span class="mi">22</span>
+<span class="gh">Out[5]: </span><span class="go">1298074214633706907132624082305024L</span>
+
+<span class="gp">In [6]: </span><span class="mf">32.</span><span class="o">**</span><span class="mi">22</span>
+<span class="gh">Out[6]: </span><span class="go">1.298074214633707e+33</span>
+</pre></div>
+</div>
+<p>You need to be very careful with integers and division. This type of division
+will not work as you expect, so you need to force one or both of the values in
+a division operation to be a floating point or complex number.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+<span class="gh">Out[1]: </span><span class="go">0</span>
+
+<span class="gp">In [2]: </span><span class="mi">1</span><span class="o">/</span><span class="mf">2.</span>
+<span class="gh">Out[2]: </span><span class="go">0.5</span>
+</pre></div>
+</div>
+<p>Floating point numbers can not be represented exactly in a computer, so <em>they
+will always contain some amount of error</em>. This is easily represented below,
+where the <code class="docutils literal notranslate"><span class="pre">==</span></code> is simply a comparison operator (coming up later) that checks
+if two things are the same. These errors accumulate as you do more
+calculations, which can affect the accuracy of your results. When we get to
+comparison tests, it will be very important to keep this limitation in mind.
+<em>NOTE:</em> This is not a limitation of Python, but a general limitation of the
+way computers represent floating point numbers. Programs like Excel will
+sometimes do tricks behind the scenes to ‘avoid’ these errors, but they are
+always there.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="mf">0.3</span> <span class="o">==</span> <span class="mf">0.3</span>
+<span class="gh">Out[1]: </span><span class="go">True</span>
+
+<span class="gp">In [2]: </span><span class="mf">0.3</span> <span class="o">==</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
+<span class="gh">Out[2]: </span><span class="go">False</span>
+</pre></div>
+</div>
+</section>
+<section id="strings-aka-text">
+<span id="strings"></span><h2>Strings (aka Text)<a class="headerlink" href="#strings-aka-text" title="Permalink to this heading">¶</a></h2>
+<p>Strings are the fancy name for text in Python (and many other computer
+languages). Strings can be wrapped in single or double quotes, it usually
+doesn’t matter what you choose. However, if you want to use either a single or
+double quote in your text then, you can’t use that type of quote to wrap your
+string. String also work with the <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code> operators.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="s1">&#39;This is a string&#39;</span>
+<span class="gh">Out[1]: </span><span class="go">&#39;This is a string&#39;</span>
+
+<span class="gp">In [2]: </span><span class="s2">&quot;So is this.&quot;</span>
+<span class="gh">Out[2]: </span><span class="go">&#39;So is this.&#39;</span>
+
+<span class="gp">In [47]: </span><span class="s1">&#39;Hello&#39;</span> <span class="o">+</span> <span class="s1">&#39;World&#39;</span>
+<span class="gh">Out[47]: </span><span class="go">&#39;HelloWorld&#39;</span>
+
+<span class="gp">In [48]: </span><span class="s1">&#39;Hello&#39;</span><span class="o">*</span><span class="mi">7</span>
+<span class="gh">Out[48]: </span><span class="go">&#39;HelloHelloHelloHelloHelloHelloHello&#39;</span>
+</pre></div>
+</div>
+<p>Sometimes you may want your text to span multiple lines. You can do that by
+using a triple single/double quote notation. This is heavily used in
+<a class="reference internal" href="basics2.html#comment"><span class="std std-ref">commenting</span></a>.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [29]: </span><span class="s2">&quot;&quot;&quot;Here&#39;s some multi-</span>
+<span class="go">    ...: line text&quot;&quot;&quot;</span>
+<span class="gh">Out[29]: </span><span class="go">&quot;Here&#39;s some multi-\nline text&quot;</span>
+</pre></div>
+</div>
+<p>This last example also illustrates the use of special characters. In strings,
+the <code class="docutils literal notranslate"><span class="pre">\</span></code> is called an escape character, and the character directly after will
+then be given a special meaning. Below is a listing of some common escaped
+special characters.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">\\</span></code> – Just adds a ‘\’ to your string. This can get really annoying when
+your working with file and folder paths in Windows.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\n</span></code> – New line. This forces the text to go to the next line. This is the
+most common and preferred way to start a new line of text.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\r</span></code> – Carriage return. This also forces the text to go to the next line.
+This was commonly used in older Mac OS versions and you will also see it in
+conjunction with the new line character on Windows (e.g. <code class="docutils literal notranslate"><span class="pre">\r\n</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\t</span></code> – Tab.</p></li>
+</ul>
+<p>There are a couple of other types of special strings: raw and unicode strings.
+Raw strings have an ‘r’ preceding the first quote mark (e.g. <code class="docutils literal notranslate"><span class="pre">r'A</span> <span class="pre">raw</span>
+<span class="pre">string'</span></code>). Unicode are preceded by a ‘u’ (e.g. <code class="docutils literal notranslate"><span class="pre">u'Unicode'</span></code>). The usage of
+these is specialized, so I’ll leave it up to you to read about them online if
+you find that they are needed.</p>
+</section>
+<section id="lists-and-tuples">
+<h2>Lists and Tuples<a class="headerlink" href="#lists-and-tuples" title="Permalink to this heading">¶</a></h2>
+<p>Lists and tuples are ordered, arbitrary collections of Python objects.  The
+difference between a tuple and a list is both in their construction and
+something called <a class="reference internal" href="terms.html#mutable"><span class="std std-ref">mutability</span></a>, which will be discussed later.
+Lists are wrapped in block brackets, <code class="docutils literal notranslate"><span class="pre">[]</span></code>, whereas tuples are wrapped in
+circle brackets <code class="docutils literal notranslate"><span class="pre">()</span></code>. If a tuple contains only a single item, then it must
+be followed by a comma (see the last two examples below). For most things,
+lists are going to be the most common collection type, so use that as your
+default container.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [30]: </span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;Simple&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">]</span>
+<span class="gh">Out[30]: </span><span class="go">[&#39;A&#39;, &#39;Simple&#39;, &#39;list&#39;]</span>
+
+<span class="gp">In [31]: </span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;Simple&#39;</span><span class="p">,</span> <span class="s1">&#39;tuple&#39;</span><span class="p">)</span>
+<span class="gh">Out[31]: </span><span class="go">(&#39;a&#39;, &#39;Simple&#39;, &#39;tuple&#39;)</span>
+
+<span class="gp">In [32]: </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+<span class="gh">Out[32]: </span><span class="go">[1, &#39;hello&#39;, [1, 2, 3]]</span>
+
+<span class="gp">In [33]: </span><span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
+<span class="gh">Out[33]: </span><span class="go">(1,)</span>
+
+<span class="gp">In [34]: </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gh">Out[34]: </span><span class="go">1</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="ipython/ipython.html">IPython</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="basics2.html">Python Basics Part 2</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, Ryan Nelson.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

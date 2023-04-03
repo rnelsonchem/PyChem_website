@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Python Basics Part 2 &#8212; Python in Chem</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <link rel="stylesheet" href="_static/rcn_style.css" type="text/css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Special Terminology" href="terms.html" />
+    <link rel="prev" title="Python Basics Part 1" href="basics1.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>PyChem</span></a></h1>
+        <h2 class="heading"><span>Python Basics Part 2</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="basics1.html">Python Basics Part 1</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="terms.html">Special Terminology</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="python-basics-part-2">
+<h1>Python Basics Part 2<a class="headerlink" href="#python-basics-part-2" title="Permalink to this heading">¶</a></h1>
+<section id="print-statement">
+<h2>Print Statement<a class="headerlink" href="#print-statement" title="Permalink to this heading">¶</a></h2>
+<p>The print statement is your friend. This statement writes things either to the
+screen (default) or to files. You can print pretty much anything, and you will
+get some kind of output, which will be dependant on the data type. This
+statement is commonly used for debugging code.  In the examples below, notice
+the special usage of the comma.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [36]: </span><span class="nb">print</span> <span class="s1">&#39;Hello world&#39;</span>
+<span class="go">Hello world</span>
+
+<span class="gp">In [37]: </span><span class="nb">print</span> <span class="mf">7.0</span>
+<span class="go">7.0</span>
+
+<span class="gp">In [38]: </span><span class="nb">print</span> <span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s2">&quot;World&quot;</span>
+<span class="go">Hello World</span>
+
+<span class="gp">In [39]: </span><span class="nb">print</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="go">7 Hello</span>
+
+<span class="gp">In [40]: </span><span class="nb">print</span> <span class="s1">&#39;Hello</span><span class="se">\n</span><span class="s1">World&#39;</span>
+<span class="go">Hello</span>
+<span class="go">World</span>
+</pre></div>
+</div>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">¶</a></h2>
+<p>Variables are labels used to reference a particular value. Variables are set
+with the <code class="docutils literal notranslate"><span class="pre">=</span></code>, which is called the assignment operator. This operator assigns
+a piece of data or an expression (on the right) to a variable name (on the
+left). There are some rules to writing variable names, for example, the name
+can’t start with a number and can’t contain spaces or <code class="docutils literal notranslate"><span class="pre">-</span></code> characters. There
+may be more extensive lists on the web.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [49]: </span><span class="n">i</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="gp">In [50]: </span><span class="n">first_variable</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+
+<span class="gp">In [51]: </span><span class="n">Another</span> <span class="o">=</span> <span class="s1">&#39;there&#39;</span>
+</pre></div>
+</div>
+<p>Variable names can be used later as references for the data they contain. In
+this way, they abstract some of the values in your code. In Python, you can
+reassign a variable at any time that you want. In addition, you can reassign
+the variable with a reference to it’s previous state. This is done in the
+third-to-the-last line below. Variable names must be assigned a value before
+they can be used as in the last example.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [58]: </span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="gp">In [59]: </span><span class="n">y</span> <span class="o">=</span> <span class="mf">10.2</span>
+
+<span class="gp">In [60]: </span><span class="n">x</span><span class="o">*</span><span class="n">y</span>
+<span class="gh">Out[60]: </span><span class="go">71.39999999999999</span>
+
+<span class="gp">In [61]: </span><span class="n">y</span> <span class="o">=</span> <span class="mi">137</span>
+
+<span class="gp">In [62]: </span><span class="n">x</span><span class="o">*</span><span class="n">y</span>
+<span class="gh">Out[62]: </span><span class="go">959</span>
+
+<span class="gp">In [63]: </span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="mf">1.2</span>
+
+<span class="gp">In [64]: </span><span class="nb">print</span> <span class="n">y</span>
+<span class="go">138.2</span>
+
+<span class="gp">In [66]: </span><span class="nb">print</span> <span class="n">no_data_assigned</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-66-937432be0f81&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span> <span class="n">no_data_assigned</span>
+
+<span class="ne">NameError</span>: name &#39;no_data_assigned&#39; is not defined
+</pre></div>
+</div>
+</section>
+<section id="functions">
+<span id="id1"></span><h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
+<p>Functions are small bits of code that do a particular task. These will have a
+name associated with them, like a variable, but to <em>call</em> (i.e. use) them they
+must end with a pair of round brackets, <code class="docutils literal notranslate"><span class="pre">()</span></code>, which may contain some extra
+information.  Python has many built-in functions, a few of which you’ve
+already seen: <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, and <code class="docutils literal notranslate"><span class="pre">complex</span></code>.</p>
+<p>Another very common function is <code class="docutils literal notranslate"><span class="pre">range</span></code>, which creates a list of integers.
+Here’s a few examples of it’s usage. In IPython, you can find out what a
+function does typing the name of a function followed a <code class="docutils literal notranslate"><span class="pre">?</span></code>.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [68]: </span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="gh">Out[68]: </span><span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+
+<span class="gp">In [69]: </span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="gh">Out[69]: </span><span class="go">[2, 3, 4, 5, 6, 7, 8, 9]</span>
+
+<span class="gp">In [70]: </span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="gh">Out[70]: </span><span class="go">[2, 4, 6, 8, 10, 12, 14, 16, 18]</span>
+
+<span class="gp">In [71]: </span>range<span class="o">?</span>
+<span class="go">Type:       builtin_function_or_method</span>
+<span class="go">String Form:&lt;built-in function range&gt;</span>
+<span class="go">Namespace:  Python builtin</span>
+<span class="go">Docstring:</span>
+<span class="go">range([start,] stop[, step]) -&gt; list of integers</span>
+
+<span class="go">Return a list containing an arithmetic progression of integers.</span>
+<span class="go">range(i, j) returns [i, i+1, i+2, ..., j-1]; start (!) defaults to 0.</span>
+<span class="go">When step is given, it specifies the increment (or decrement).</span>
+<span class="go">For example, range(4) returns [0, 1, 2, 3].  The end point is omitted!</span>
+<span class="go">These are exactly the valid indices for a list of 4 elements.</span>
+</pre></div>
+</div>
+<p>The values that are <em>passed</em> to a function are called <em>arguments</em>. As you can
+see from the description of <code class="docutils literal notranslate"><span class="pre">range</span></code>, it can accept up to three arguments.
+The ones in square brackets are optional, so at the minimum, range must have
+one argument, which is the <em>stop</em> value. Additional arguments are processed in
+the order they appear in the description above. These are called <em>positional
+arguments</em>.</p>
+<p>Some functions have arguments that are passed into the function using a
+specific word for each value. These are called <em>keyword arguments</em>. These must
+come after the position arguments (if any), but can be passed into the
+function in any order. Below is an example with the <code class="docutils literal notranslate"><span class="pre">dict</span></code> function, which
+creates dictionaries (these are another data type that were not discussed).</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [84]: </span><span class="nb">dict</span><span class="p">(</span><span class="n">one</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">two</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">three</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="gh">Out[84]: </span><span class="go">{&#39;one&#39;: 1, &#39;three&#39;: 3, &#39;two&#39;: 2}</span>
+
+<span class="gp">In [85]: </span><span class="nb">dict</span><span class="p">(</span><span class="n">two</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">three</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">one</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gh">Out[85]: </span><span class="go">{&#39;one&#39;: 1, &#39;three&#39;: 3, &#39;two&#39;: 2}</span>
+</pre></div>
+</div>
+<p>We will see many, many types of functions, so it is good to make sure that you
+understand the terminology here. You can also create your own functions, but
+we’ll save that lesson until the examples section.</p>
+</section>
+<section id="commenting-code">
+<span id="comment"></span><h2>Commenting Code<a class="headerlink" href="#commenting-code" title="Permalink to this heading">¶</a></h2>
+<p>Comments are little notes that you add to your code, but are ignored when the
+program is executed. Commenting your code is one of the most important things
+you can do. This provides a mechanism to keep track of what you were doing.
+This may seem like a waste of time, but when you come back to something after
+a couple of months, it can be very painful to decipher what you were doing.
+Comments can be added to your code in several ways. The most common is going
+to be the <code class="docutils literal notranslate"><span class="pre">#</span></code> character. Everything to the right of this character on a
+particular line will be ignored and treated as a comment. In addition, triple
+quotes can be used to enclose multi-line comments.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [86]: </span><span class="nb">print</span> <span class="s1">&#39;Hello!&#39;</span>
+<span class="go">Hello!</span>
+
+<span class="gp">In [87]: </span><span class="c1"># print &#39;Hello!&#39;</span>
+<span class="go">    ...:</span>
+
+<span class="gp">In [88]: </span><span class="c1"># It looks like I commented-out the last example.</span>
+<span class="go">    ...:</span>
+
+<span class="gp">In [89]: </span><span class="nb">print</span> <span class="s1">&#39;Hello!&#39;</span> <span class="c1"># This comment comes after some code</span>
+<span class="go">Hello!</span>
+
+<span class="gp">In [90]: </span><span class="s1">&#39;&#39;&#39;This is a multi-</span>
+<span class="go">    ...: line bit of commenting that can be used for long</span>
+<span class="go">    ...: comments. This can not come after code, but must start on</span>
+<span class="go">    ...: its own line.&#39;&#39;&#39;</span>
+<span class="gh">Out[90]: </span><span class="go">&#39;This is a multi-\nline bit of commenting that can be used for long\ncomments. This can not come after code, but must start on\nits own line.&#39;</span>
+
+<span class="gp">In [91]: </span><span class="c1"># In the above example, nothing would get printed if that was found</span>
+<span class="go">    ...: # in a Python program file.</span>
+<span class="go">    ...: # It&#39;s only in IPython that something gets printed.</span>
+<span class="go">    ...:</span>
+</pre></div>
+</div>
+</section>
+<section id="indexing">
+<h2>Indexing<a class="headerlink" href="#indexing" title="Permalink to this heading">¶</a></h2>
+<p>Strings, lists, and tuples are all ordered data types, and the individual
+elements can be extracted numerically in a process called <em>indexing</em>. The
+<em>index</em> is a number contained in square brackets directly following the name
+of the variable. This number is a positional reference to an individual
+element of the underlying data. Index values start at zero and can not
+exceed the length of the data. This is best seen by example.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [93]: </span><span class="n">a_string</span> <span class="o">=</span> <span class="s1">&#39;Hello World&#39;</span>
+
+<span class="gp">In [94]: </span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">]</span>
+
+<span class="gp">In [95]: </span><span class="n">a_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">)</span>
+
+<span class="gp">In [96]: </span><span class="n">a_string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># The first element</span>
+<span class="gh">Out[96]: </span><span class="go">&#39;H&#39;</span>
+
+<span class="gp">In [97]: </span><span class="n">a_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gh">Out[97]: </span><span class="go">&#39;Hello&#39;</span>
+
+<span class="gp">In [98]: </span><span class="n">a_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gh">Out[98]: </span><span class="go">&#39;Hello&#39;</span>
+
+<span class="gp">In [99]: </span><span class="n">a_string</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="gh">Out[99]: </span><span class="go">&#39;l&#39;</span>
+
+<span class="gp">In [100]: </span><span class="n">a_string</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span>
+<span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-100-ea0b7e207709&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a_string</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span>
+
+<span class="ne">IndexError</span>: string index out of range
+</pre></div>
+</div>
+<p>The built-in function <code class="docutils literal notranslate"><span class="pre">len</span></code> returns the length of the data and will help you
+to avoid indexing errors.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [101]: </span><span class="nb">len</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>
+<span class="gh">Out[101]: </span><span class="go">11</span>
+
+<span class="gp">In [102]: </span><span class="nb">len</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
+<span class="gh">Out[102]: </span><span class="go">2</span>
+
+<span class="gp">In [103]: </span><span class="nb">len</span><span class="p">(</span><span class="n">a_tuple</span><span class="p">)</span>
+<span class="gh">Out[103]: </span><span class="go">2</span>
+</pre></div>
+</div>
+<p>Indexing can also be used to slice a segment of the data, with an optional
+skip as well, by separating index values with a <code class="docutils literal notranslate"><span class="pre">:</span></code>. This can be very useful
+for removing portions of the data or renaming strings. If one of the index
+values is missing, it is taken as either the start or end of the data.
+Negative values can be used if you want to go in the reverse direction.</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [105]: </span><span class="n">a_string</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="c1"># Does not include the 6th index (i.e. 7th element)</span>
+<span class="gh">Out[105]: </span><span class="go">&#39;llo &#39;</span>
+
+<span class="gp">In [106]: </span><span class="n">a_string</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># skip every other element</span>
+<span class="gh">Out[106]: </span><span class="go">&#39;loWrd&#39;</span>
+
+<span class="gp">In [107]: </span><span class="n">a_string</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+<span class="gh">Out[107]: </span><span class="go">&#39; World&#39;</span>
+
+<span class="gp">In [108]: </span><span class="n">a_string</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="gh">Out[108]: </span><span class="go">&#39;Hello&#39;</span>
+
+<span class="gp">In [109]: </span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;picture.jpg&#39;</span>
+
+<span class="gp">In [110]: </span><span class="n">filename</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>
+<span class="gh">Out[110]: </span><span class="go">&#39;jpg&#39;</span>
+
+<span class="gp">In [111]: </span><span class="n">filename</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="gh">Out[111]: </span><span class="go">&#39;picture.&#39;</span>
+
+<span class="gp">In [112]: </span><span class="n">newfilename</span> <span class="o">=</span> <span class="n">filename</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;png&#39;</span>
+
+<span class="gp">In [113]: </span><span class="n">newfilename</span>
+<span class="gh">Out[113]: </span><span class="go">&#39;picture.png&#39;</span>
+</pre></div>
+</div>
+<p>For lists only, indexing can be used to change the values at a specific
+location, but this is covered in the <a class="reference internal" href="terms.html#mutable"><span class="std std-ref">mutability</span></a> section.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="basics1.html">Python Basics Part 1</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="terms.html">Special Terminology</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, Ryan Nelson.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>
